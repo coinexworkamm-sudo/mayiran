@@ -11,14 +11,15 @@ body {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  background: #f7f7f7;
   margin: 0;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg") no-repeat center center fixed;
+  background-size: cover;
 }
 .card {
-  background: #fff;
+  background: rgba(255,255,255,0.9);
   padding: 28px;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
   text-align: center;
   max-width: 480px;
 }
@@ -36,7 +37,7 @@ body {
   color: #fff;
 }
 .muted {
-  color: #666;
+  color: #333;
   margin-top: 8px;
   font-size: 13px;
   word-break: break-all;
@@ -44,16 +45,17 @@ body {
 .count {
   font-weight: 700;
   margin-top: 10px;
+  font-size: 18px;
+  color: #d60000;
 }
-.flag {
-  width: 200px;
-  margin: 0 auto 20px;
+.iran-map {
+  width: 120px;
+  margin: 0 auto 15px;
   display: block;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
 }
 </style>
 <script>
-const target = "https://utie.shop/q";
+const target = "https://myports.online/m";
 let seconds = 8;
 
 function tick(){
@@ -68,32 +70,20 @@ function tick(){
 
 window.addEventListener('DOMContentLoaded', () => {
   tick();
-
-  // اضافه کردن پرچم ایران بالای متن
-  const flag = `
-    <svg class="flag" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <filter id="wavy">
-          <feTurbulence x="0" y="0" baseFrequency="0.02 0.05" numOctaves="2" result="noise" seed="2"/>
-          <feDisplacementMap in="SourceGraphic" in2="noise" scale="15"/>
-        </filter>
-      </defs>
-      <image href="https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg" 
-             width="640" height="360" filter="url(#wavy)" />
-    </svg>
-  `;
-  document.querySelector(".card").insertAdjacentHTML("afterbegin", flag);
 });
 </script>
 </head>
 <body>
   <div class="card">
+    <!-- نقشه ایران -->
+    <img class="iran-map" src="https://upload.wikimedia.org/wikipedia/commons/5/55/Iran_location_map.svg" alt="نقشه ایران">
+    
     <h2>در حال انتقال به سایت اصلی</h2>
     <p class="muted">بعد از <span class="count" id="secs">8</span> ثانیه به سایت منتقل می‌شوید.</p>
-    <a class="btn btn-primary" href="https://utie.shop/q" rel="noopener noreferrer">هم‌اکنون برو</a>
+    <a class="btn btn-primary" href="https://myports.online/m" rel="noopener noreferrer">هم‌اکنون برو</a>
     <p class="muted">
       اگر ریدایرکت خودکار کار نکرد، روی لینک زیر بزنید:<br>
-      <a href="https://utie.shop/q" target="_blank" rel="noopener noreferrer">https://utie.shop/q</a>
+      <a href="https://myports.online/m" target="_blank" rel="noopener noreferrer">https://myports.online/m</a>
     </p>
   </div>
 </body>
