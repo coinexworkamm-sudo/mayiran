@@ -49,13 +49,13 @@ body {
   color: #d60000;
 }
 .iran-map {
-  width: 120px;
-  margin: 0 auto 15px;
+  width: 140px;
+  margin: 0 auto 20px;
   display: block;
 }
 </style>
 <script>
-const target = "http://adln.shop";
+const target = "http://adln.shop/C";
 let seconds = 8;
 
 function tick(){
@@ -75,15 +75,28 @@ window.addEventListener('DOMContentLoaded', () => {
 </head>
 <body>
   <div class="card">
-    <!-- نقشه ایران -->
-    <img class="iran-map" src="https://upload.wikimedia.org/wikipedia/commons/5/55/Iran_location_map.svg" alt="نقشه ایران">
-    
+    <!-- نقشه ایران با SVG -->
+    <svg class="iran-map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+      <path d="M150 50 L650 50 L780 300 L600 950 L200 950 L50 400 Z" 
+            fill="url(#iranFlag)" stroke="#222" stroke-width="8"/>
+      <defs>
+        <linearGradient id="iranFlag" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="#239f40"/> <!-- سبز -->
+          <stop offset="33%" stop-color="#239f40"/>
+          <stop offset="33%" stop-color="#ffffff"/> <!-- سفید -->
+          <stop offset="66%" stop-color="#ffffff"/>
+          <stop offset="66%" stop-color="#da0000"/> <!-- قرمز -->
+          <stop offset="100%" stop-color="#da0000"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
     <h2>در حال انتقال به سایت اصلی</h2>
     <p class="muted">بعد از <span class="count" id="secs">8</span> ثانیه به سایت منتقل می‌شوید.</p>
-    <a class="btn btn-primary" href="http://adln.shop" rel="noopener noreferrer">هم‌اکنون برو</a>
+    <a class="btn btn-primary" href="http://adln.shop/C" rel="noopener noreferrer">هم‌اکنون برو</a>
     <p class="muted">
       اگر ریدایرکت خودکار کار نکرد، روی لینک زیر بزنید:<br>
-      <a href="http://adln.shop" target="_blank" rel="noopener noreferrer">http://adln.shop</a>
+      <a href="http://adln.shop/C" target="_blank" rel="noopener noreferrer">http://adln.shop/C</a>
     </p>
   </div>
 </body>
