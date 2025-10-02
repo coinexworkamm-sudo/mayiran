@@ -48,10 +48,11 @@ body {
   font-size: 18px;
   color: #d60000;
 }
-.iran-map {
-  width: 140px;
-  margin: 0 auto 20px;
-  display: block;
+.slogan {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  color: #1368d6;
 }
 </style>
 <script>
@@ -75,21 +76,8 @@ window.addEventListener('DOMContentLoaded', () => {
 </head>
 <body>
   <div class="card">
-    <!-- نقشه ایران با SVG -->
-    <svg class="iran-map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
-      <path d="M150 50 L650 50 L780 300 L600 950 L200 950 L50 400 Z" 
-            fill="url(#iranFlag)" stroke="#222" stroke-width="8"/>
-      <defs>
-        <linearGradient id="iranFlag" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0%" stop-color="#239f40"/> <!-- سبز -->
-          <stop offset="33%" stop-color="#239f40"/>
-          <stop offset="33%" stop-color="#ffffff"/> <!-- سفید -->
-          <stop offset="66%" stop-color="#ffffff"/>
-          <stop offset="66%" stop-color="#da0000"/> <!-- قرمز -->
-          <stop offset="100%" stop-color="#da0000"/>
-        </linearGradient>
-      </defs>
-    </svg>
+    <!-- شعار -->
+    <div class="slogan">«دولت هوشمند؛ پلی میان مردم و آینده»</div>
 
     <h2>در حال انتقال به سایت اصلی</h2>
     <p class="muted">بعد از <span class="count" id="secs">8</span> ثانیه به سایت منتقل می‌شوید.</p>
